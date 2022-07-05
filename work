@@ -1,0 +1,135 @@
+//html
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+      <body>
+        <div class="flex-container print-dialog" >
+ 
+          <div>
+            <h1 ><i class="fa fa-print"> </i> Print</h1>
+            <p>
+                Do you want to print the list in a grid-layout, all individual forms in detail, or blank template form?
+            </p>
+            <ul class="list">
+                <li>Print List<i class="arrow right"></i></li>
+                <li>Print All Form<i class="arrow right"></i></li>
+                <li>Print Blank Template <i class="arrow right"></i></li>
+
+            </ul>
+        </div>
+          <div>
+            <button class="close-button" aria-label="Close alert" type="button" data-close>
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h1><i class="fa fa-bars"> </i> Export</h1>
+            <p>
+                Export this page to your clipboard, to a CSV, Excel, or as a PDF.
+            </p>
+            <ul class="list">
+                <li>Copy <i class="arrow right"></i></li>
+                <li>CSV<i class="arrow right"></i></li>
+                <li>Excel<i class="arrow right"></i></li>
+                <li>PDF<i class="arrow right"></i> </li>
+            </ul>
+        </div> 
+        </div>
+    
+    </body>
+    
+    
+    //css
+    
+    :root 
+{
+    --font: 'Poppins'
+ }
+
+.flex-container {
+  display: flex; 
+  background-color: rgb(73, 73, 75);
+  width: 50%;
+  height: 50%;
+  text-align: left;
+  border: 0.5% solid rgb(73, 73, 75);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-self:auto;
+
+}
+
+  .close-button
+  {
+    float: right;
+    border-radius: 70px;
+    border-color: rgb(255, 255, 255);
+    cursor: pointer;
+  }
+  .flex-container > div 
+  {
+    background-color: #f5efef;
+    margin: .5px;
+    padding: 20px;
+    width:50%;
+  }
+ 
+  ul
+  {
+    padding: 0px;
+    margin: 0px;
+    text-align: left;
+  }
+  
+ .list li
+  {
+    padding: 10px;
+    border-bottom: 1px solid rgb(194, 184, 184);
+    list-style-type:none;
+    font-family: var(--font);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    font-style: normal;
+    
+  }
+  li:nth-child(4) {
+    border-bottom:none;
+  }
+  .arrow {
+    border: solid black;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    float:right;
+    margin-top: 9px;
+
+  }
+  .print-dialog h1{
+    font-family: var(--font);
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 42px;
+    font-style: normal;
+  }
+  .print-dialog p
+  {
+    font-family: var(--font);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    font-style: normal;
+  }
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+
